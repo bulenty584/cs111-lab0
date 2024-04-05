@@ -1,27 +1,28 @@
 # A Kernel Seedling
-TODO: intro
+This lab is for CS111 at UCLA. The task was to design a kernel module that outputted every process currently running.
 
 ## Building
 ```shell
-TODO: cmd for build
+make
 ```
 
 ## Running
 ```shell
-TODO: cmd for running binary
+sudo insmod proc_count.ko
+cat /proc/count
 ```
-TODO: results?
+A single integer is printed.
 
 ## Cleaning Up
 ```shell
-TODO: cmd for cleaning the built binary
+sudo rmmod proc_count
 ```
 
 ## Testing
 ```python
 python -m unittest
 ```
-TODO: results?
+All tests passed, should return OK
 
 Report which kernel release version you tested your module on
 (hint: use `uname`, check for options with `man uname`).
@@ -30,4 +31,4 @@ It should match release numbers as seen on https://www.kernel.org/.
 ```shell
 uname -r -s -v
 ```
-TODO: kernel ver?
+Linux 5.14.8-arch1-1
